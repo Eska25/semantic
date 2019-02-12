@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Semantics</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix::before , .clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		body{
+			font:1.2em "Tahoma" , "Arial ", sans-serif;
+			background-color: blue; 
+			text-align: center;
+			border:1px  solid #ccc;
+			color: white;
+		}
+		
+		header{
+			height: 150px;
+			border-bottom: 1px solid #ccc; 
+			line-height: 150px;
+		}
+		nav{
+			height: 50px;
+			border-bottom: 1px solid #ccc;
+			line-height: 50px;
+		}
+		main{
+			border-bottom: 1px solid #ccc;
+		}
+		section{
+			width: 75%;
+			border-right:1px solid #ccc;
+		}
+		aside{
+			width: 25%;
+		}
+		section , aside{
+			float: left;
+			height: 350px;
+			line-height: 350px;
+		}
+		footer{
+			height: 100px;	
+			line-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<nav>main navigation</nav>
+	<main class="clearfix">
+		<section>section</section>
+		<aside>aside</aside>
+	</main>
+	<footer>footer</footer>
+</body>
+</html>
